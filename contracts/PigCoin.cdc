@@ -160,10 +160,10 @@ pub contract PigCoin: FungibleToken {
     init() {
         // Set our named paths.
         //FIXME: REMOVE SUFFIX BEFORE RELEASE
-        self.VaultStoragePath = /storage/PigCoinVault002
-        self.ReceiverPublicPath = /public/PigCoinReceiver002
-        self.BalancePublicPath = /public/PigCoinBalance002
-        self.AdminStoragePath = /storage/PigCoinAdmin002
+        self.VaultStoragePath = /storage/PigCoinVault
+        self.ReceiverPublicPath = /public/PigCoinReceiver
+        self.BalancePublicPath = /public/PigCoinBalance
+        self.AdminStoragePath = /storage/PigCoinAdmin
 
         // Initialize contract state.
         self.totalSupply = 0.0
