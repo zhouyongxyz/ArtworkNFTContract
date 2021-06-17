@@ -1,6 +1,6 @@
 # Paprika Artwork Trading Platform
 
-![image-20210617103326171](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210617103326171.png)
+![image-20210617103326171](https://github.com/zhouyongxyz/ArtworkNFTContract/blob/master/Paprika.png)
 
 website: http://www.paprika.cool/art/index
 
