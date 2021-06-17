@@ -186,10 +186,9 @@ pub contract ArtworkNFTs: NonFungibleToken {
     //
 	init() {
         // Set our named paths
-        //FIXME: REMOVE SUFFIX BEFORE RELEASE
-        self.CollectionStoragePath = /storage/ArtworkNFTsCollection002
-        self.CollectionPublicPath = /public/ArtworkNFTsCollection002
-        self.MinterStoragePath = /storage/ArtworkNFTsMinter002
+        self.CollectionStoragePath = /storage/ArtworkNFTsCollection
+        self.CollectionPublicPath = /public/ArtworkNFTsCollection
+        self.MinterStoragePath = /storage/ArtworkNFTsMinter
 
         // Initialize the total supply
         self.totalSupply = 0
