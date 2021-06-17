@@ -309,8 +309,7 @@ pub contract ArtworkNFTsMarket {
     }
 
     init () {
-        //FIXME: REMOVE SUFFIX BEFORE RELEASE
-        self.CollectionStoragePath = /storage/ArtworkNFTsMarketCollection002
-        self.CollectionPublicPath = /public/ArtworkNFTsMarketCollection002
+        self.CollectionStoragePath = /storage/ArtworkNFTsMarketCollection
+        self.CollectionPublicPath = /public/ArtworkNFTsMarketCollection
     }
 }
