@@ -1,7 +1,7 @@
 import NonFungibleToken from "./NonFungibleToken.cdc"
 
 // ArtworkNFTs
-// NFT items for Kitties!
+// NFT items for Artwork NFT!
 //
 pub contract ArtworkNFTs: NonFungibleToken {
 
