@@ -114,9 +114,9 @@ pub contract ArtworkNFTs: NonFungibleToken {
         }
 
         // borrowArtworkNFT
-        // Gets a reference to an NFT in the collection as a KittyItem,
+        // Gets a reference to an NFT in the collection as a ArtworkNFT,
         // exposing all of its fields (including the typeID).
-        // This is safe as there are no functions that can be called on the KittyItem.
+        // This is safe as there are no functions that can be called on the ArtworkNFT.
         //
         pub fun borrowArtworkNFT(id: UInt64): &ArtworkNFTs.NFT? {
             if self.ownedNFTs[id] != nil {
@@ -167,7 +167,7 @@ pub contract ArtworkNFTs: NonFungibleToken {
 	}
 
     // fetch
-    // Get a reference to a KittyItem from an account's Collection, if available.
+    // Get a reference to a ArtworkNFT from an account's Collection, if available.
     // If an account does not have a ArtworkNFTs.Collection, panic.
     // If it has a collection but does not contain the itemID, return nil.
     // If it has a collection and that collection contains the itemID, return a reference to that.
@@ -177,7 +177,7 @@ pub contract ArtworkNFTs: NonFungibleToken {
             .getCapability(ArtworkNFTs.CollectionPublicPath)!
             .borrow<&ArtworkNFTs.Collection{ArtworkNFTs.ArtworkNFTsCollectionPublic}>()
             ?? panic("Couldn't get collection")
-        // We trust ArtworkNFTs.Collection.borowKittyItem to get the correct itemID
+        // We trust ArtworkNFTs.Collection.borowArtworkNFT to get the correct itemID
         // (it checks it before returning it).
         return collection.borrowArtworkNFT(id: itemID)
     }
