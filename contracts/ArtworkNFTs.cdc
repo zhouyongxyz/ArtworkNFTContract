@@ -56,13 +56,13 @@ pub contract ArtworkNFTs: NonFungibleToken {
             // should be the same as the argument to the function
             post {
                 (result == nil) || (result?.id == id):
-                    "Cannot borrow KittyItem reference: The ID of the returned reference is incorrect"
+                    "Cannot borrow ArtworkNFT reference: The ID of the returned reference is incorrect"
             }
         }
     }
 
     // Collection
-    // A collection of KittyItem NFTs owned by an account
+    // A collection of ArtworkNFT NFTs owned by an account
     //
     pub resource Collection: ArtworkNFTsCollectionPublic, NonFungibleToken.Provider, NonFungibleToken.Receiver, NonFungibleToken.CollectionPublic {
         // dictionary of NFT conforming tokens
@@ -186,9 +186,9 @@ pub contract ArtworkNFTs: NonFungibleToken {
     //
 	init() {
         // Set our named paths
-        self.CollectionStoragePath = /storage/ArtworkNFTsCollection
-        self.CollectionPublicPath = /public/ArtworkNFTsCollection
-        self.MinterStoragePath = /storage/ArtworkNFTsMinter
+        self.CollectionStoragePath = /storage/PaprikaArtworkNFTsCollection
+        self.CollectionPublicPath = /public/PaprikaArtworkNFTsCollection
+        self.MinterStoragePath = /storage/PaprikaArtworkNFTsMinter
 
         // Initialize the total supply
         self.totalSupply = 0
