@@ -246,7 +246,7 @@ pub contract ArtworkNFTsMarket {
         // purchase
         // If the caller passes a valid itemID and the item is still for sale, and passes a PigCoin vault
         // typed as a FungibleToken.Vault (PigCoin.deposit() handles the type safety of this)
-        // containing the correct payment amount, this will transfer the KittyItem to the caller's
+        // containing the correct payment amount, this will transfer the ArtworkNFT to the caller's
         // ArtworkNFTs collection.
         // It will then remove and destroy the offer.
         // Note that is means that events will be emitted in this order:
@@ -309,7 +309,7 @@ pub contract ArtworkNFTsMarket {
     }
 
     init () {
-        self.CollectionStoragePath = /storage/ArtworkNFTsMarketCollection
-        self.CollectionPublicPath = /public/ArtworkNFTsMarketCollection
+        self.CollectionStoragePath = /storage/PaprikaArtworkNFTsMarketCollection
+        self.CollectionPublicPath = /public/PaprikaArtworkNFTsMarketCollection
     }
 }
